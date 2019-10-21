@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">High-Tech store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>  
+      
+
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="telephone"  >Telephone </a>
+        </li> 
+
+        <li class="nav-item active">
+            <a class="nav-link" routerLink="pc">Pc </a>
+          </li>
+            
+      </ul>
+      <button (click)="onSearch()" id="btnsearch" style="margin-right: 1%" type="button" class="btn btn-secondary">Search</button>
+      <input [(ngModel)]="key" id="search" name="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">  
+      <a routerLink="panier" >   
+      <mat-icon class="panier"  matBadge="{{service.getLength()}}">shopping_cart </mat-icon>
+      </a>
+        
+    </div>
+  </nav>

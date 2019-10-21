@@ -1,0 +1,37 @@
+@media (min-width:1200px)
+{  
+    .panier{
+        left: 1%; 
+        margin-top: 40%;
+    }  
+    #search{  
+        width: 20%;
+
+    } 
+
+
+}  
+
+@media (min-width:992px)
+{  
+    .panier{
+        left: 1%; 
+        margin-top: 40%;
+    }  
+    #search{  
+        width: 20%;
+
+    } 
+
+
+} 
+
+.panier{
+    left: 1%; 
+    margin-top: 3%;
+}  
+#search{  
+    width: 20%; 
+    
+
+}

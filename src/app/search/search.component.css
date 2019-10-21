@@ -1,0 +1,47 @@
+.modif{ margin-left: 40%
+
+}  
+#btnadd{
+    margin-bottom: 20px; 
+    position: relative;
+
+}
+
+@media (min-width: 576px) {  
+
+    
+    #btnadd{
+        margin-bottom: 20px; 
+        position: relative;
+    
+    }
+
+
+ }
+
+@media (min-width: 768px) {  
+  
+    
+}
+
+@media (min-width: 992px) {  
+  
+    #btnadd{
+        margin-bottom: 20px; 
+        position: relative;
+        margin-left: 80px;
+    
+    }
+
+ }
+
+@media (min-width: 1200px) { 
+
+    #btnadd{
+        margin-bottom: 20px; 
+        position: relative;
+        margin-left: 65px;
+    
+    }
+
+ }

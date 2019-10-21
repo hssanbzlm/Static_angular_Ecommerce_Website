@@ -1,0 +1,112 @@
+
+ 
+
+
+
+
+  
+  
+  <div *ngIf="service.getPanier().length!=0" id="card"> 
+
+  <mat-card   >   
+  
+      <table class="table table-borderless">
+          <thead>
+            <tr>
+            
+              <th scope="col">Produit</th>
+              <th scope="col">Quantité</th>
+              <th scope="col">sous-total</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let p of service.getPanier()">
+            <tr>
+              <td> {{p.Product}} </td>
+              <td>{{p.Quantity}}</td>
+              <td>{{p.Price}}</td>
+            </tr>
+            </tbody>  
+            <tr>
+            
+                <th scope="col"></th> 
+                <th scope="col"></th>
+                <th scope="col"> Total price</th>
+
+            </tr> 
+            <tr>
+                <td >  </td> 
+                <td >  </td> 
+                <td > {{service.getTotalaprice()}} </td> 
+
+
+                </tr>
+            </table>
+
+
+
+
+  </mat-card> 
+
+</div>    
+   
+<div id="step">
+    <mat-vertical-stepper [linear]="isLinear" #stepper>
+     
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Fill out your name</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>  
+
+      <mat-step [stepControl]="thirdFormGroup">
+          <form [formGroup]="thirdFormGroup">
+            <ng-template matStepLabel>Fill out your mobile number</ng-template>
+            <mat-form-field>
+              <input matInput placeholder="Mobile" formControlName="thirdCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Fill out your address</ng-template>
+          <mat-form-field>
+            <input matInput placeholder="Address" formControlName="secondCtrl" required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <div>You are now done.By confirming ,<br> you agree to our terms.<br> Shipping is in two weeks .
+
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+          <button   mat-button (click)="onClickconfirm()">Confirm</button>
+
+        </div>
+      </mat-step>
+    </mat-vertical-stepper>    
+    </div>
+  
+
+
+
+
+
+
+  

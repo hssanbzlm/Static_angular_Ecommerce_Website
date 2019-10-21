@@ -1,0 +1,50 @@
+
+<div *ngIf="tech.length>0 ; else nothingtoshow ">
+<div class="container">
+
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0"> {{title}} search </h1>
+  
+    <hr class="mt-2 mb-5">
+  
+    <div class="row text-center text-lg-left"  > 
+  
+      <div class="col-lg-3 col-md-4 col-6" *ngFor="let t of tech | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">    
+        <table> 
+          <tr>
+        <a routerLink="/details/{{t.id}}" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src={{t.imageUrl}} alt="">  
+        </a>       
+      </tr>
+      <tr> 
+        
+          <button type="button" class="btn btn-warning" id="btnadd" (click)="onAdd(t)" ><i>Add to cart  <mat-icon class="matfont"> add_shopping_cart  </mat-icon>  </i>   
+          </button>
+    </tr> 
+    </table>
+    </div>
+    
+      
+    </div>
+  
+  </div>
+  <!-- /.container -->
+<div class="modif" >
+<ngb-pagination [pageSize]="pageSize" [collectionSize]="collectionSize" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+
+</div>   
+
+</div> 
+
+<ng-template #nothingtoshow> 
+
+
+  <div style="margin-top: 10%; width: 30%;margin-left: 30%;font-size: 200%;" class="alert alert-warning" role="alert" >
+      Nothing to show for {{title}} 
+
+
+  </div>
+
+</ng-template>
+
+
+ 

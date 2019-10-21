@@ -1,0 +1,25 @@
+
+<head>
+
+  <script src="https://kit.fontawesome.com/99d4e5bbba.js" crossorigin="anonymous"></script>
+
+</head>
+<div *ngIf="tech" class="card" >
+    <img src="{{tech.imageUrl}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{tech.name}}</h5><hr>
+      <h5>Caracteristics</h5>   <p class="card-text">{{tech.caracteristics}}</p> 
+      <h5>Price</h5>
+
+      <p class="card-text">{{tech.prix}}</p>
+
+    </div> 
+       
+    <hr>
+    <button type="button" class="btn btn-warning" id="btnadd" (click)="onAdd(tech)" ><i>Add to cart  <mat-icon class="matfont"> add_shopping_cart  </mat-icon>  </i>   
+    </button>
+
+  </div> 
+
+  
+

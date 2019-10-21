@@ -1,0 +1,26 @@
+.card{
+    margin-left: 35%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    width: 30%;
+    padding: 2%;
+}
+
+
+#spinner{
+
+    margin-left: 0%;
+} 
+
+#btnadd{ 
+
+    margin-bottom: 4%; 
+    margin-top: 5%;
+    margin-left: 23%;
+    width: 50%;
+
+
+} 
+.matfont{
+    font-size: 15px;
+}
